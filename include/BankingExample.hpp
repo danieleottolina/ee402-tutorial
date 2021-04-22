@@ -5,10 +5,10 @@
  *      Author: daniele
  */
 
-#ifndef BANKINGEXAMPLE2_HPP_
-#define BANKINGEXAMPLE2_HPP_
+#ifndef BANKINGEXAMPLE_HPP_
+#define BANKINGEXAMPLE_HPP_
 
-class Account2 {
+class Account {
 
 protected:
 
@@ -17,8 +17,8 @@ protected:
 
 public:
 
-	Account2(float balance, int accountNumber);
-	virtual ~Account2();
+	Account(float balance, int accountNumber);
+	virtual ~Account();
 	float getBalance();
 	void setBalance(float balance);
 	int getAccountNumber();
@@ -27,7 +27,7 @@ public:
 	virtual void makeWithdrawal(float);
 };
 
-class CurrentAccount2: public Account2 {
+class CurrentAccount: public Account {
 
 protected:
 
@@ -35,10 +35,10 @@ protected:
 
 public:
 
-	CurrentAccount2(float balance, int accountNumber, float overdraftLimit);
+	CurrentAccount(float balance, int accountNumber, float overdraftLimit);
 	virtual void display();
 	virtual void makeWithdrawal(float);
 	virtual void setOverdraftLimit(float);
 };
 
-#endif /* BANKINGEXAMPLE2_HPP_ */
+#endif /* BANKINGEXAMPLE_HPP_ */

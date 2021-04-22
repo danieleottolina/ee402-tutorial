@@ -6,38 +6,38 @@
  */
 
 #include <iostream>
-#include "BankingExample2.hpp"
+#include "BankingExample.hpp"
 
-Account2::Account2(float balanceObject, int accountNumberObject) {
+Account::Account(float balanceObject, int accountNumberObject) {
 	accountNumber = accountNumberObject;
 	balance = balanceObject;
 }
 
-Account2::~Account2() {
+Account::~Account() {
 	std::cout << "Destroying Account object..." << std::endl;
 }
 
-float Account2::getBalance() {
+float Account::getBalance() {
 	return balance;
 }
 
-void Account2::setBalance(float newBalance) {
+void Account::setBalance(float newBalance) {
 	balance = newBalance;
 }
 
-int Account2::getAccountNumber() {
+int Account::getAccountNumber() {
 	return accountNumber;
 }
 
-void Account2::display() {
+void Account::display() {
 	std::cout << "Account number: " << accountNumber << std::endl;
 	std::cout << "Balance: " << balance << std::endl;
 }
 
-void Account2::makeLodgement(float amount) {
+void Account::makeLodgement(float amount) {
 	balance = balance + amount;
 }
 
-void Account2::makeWithdrawal(float amount) {
+void Account::makeWithdrawal(float amount) {
 	balance = balance - amount;
 }
