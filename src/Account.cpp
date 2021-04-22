@@ -6,6 +6,7 @@
  */
 
 #include <iostream>
+#include <string>
 #include "BankingExample.hpp"
 
 Account::Account(float balanceObject, int accountNumberObject) {
@@ -31,6 +32,7 @@ int Account::getAccountNumber() {
 
 void Account::display() {
 	std::cout << "Account number: " << accountNumber << std::endl;
+	std::cout << "Account type: " << getAccountType() << std::endl;
 	std::cout << "Balance: " << balance << std::endl;
 }
 

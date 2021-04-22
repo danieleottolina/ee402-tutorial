@@ -6,9 +6,9 @@
 // Description : Hello World in C++, Ansi-style
 //============================================================================
 
-#include "BankingExample3.hpp"
+#include "BankingExample.hpp"
 
 int main() {
-	CurrentAccount3 b = CurrentAccount3(50.0, 12345, 200.0);
+	CurrentAccount b = CurrentAccount(50.0, 12345, 200.0);
 	b.display();
 }

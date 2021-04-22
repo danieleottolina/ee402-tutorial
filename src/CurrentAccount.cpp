@@ -6,6 +6,7 @@
  */
 
 #include <iostream>
+#include <string>
 #include "BankingExample.hpp"
 
 CurrentAccount::CurrentAccount(float balanceObject, int accountNumberObject,
@@ -13,14 +14,18 @@ CurrentAccount::CurrentAccount(float balanceObject, int accountNumberObject,
 			Account(balanceObject, accountNumberObject), overdraftLimit(overdraftLimitObject)
 			{}
 
+std::string CurrentAccount::getAccountType() {
+	return "Current Account";
+}
+
 void CurrentAccount::display() {
 	Account::display();
 	std::cout << "Overdraft limit: " << overdraftLimit << std::endl;
 }
 
 void CurrentAccount::makeWithdrawal(float amount) {
-	if (amount < (getBalance() + overdraftLimit)) {
-		setBalance(getBalance() - amount);
+	if (amount < (balance + overdraftLimit)) {
+		balance = (balance - amount);
 	}
 	else {
 		std::cout << "Sum exceeds overdraft limit. Operation aborted." << std::endl;
